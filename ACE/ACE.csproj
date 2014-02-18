@@ -54,6 +54,7 @@
     <Compile Include="Models\Enrollment.cs" />
     <Compile Include="Models\Student.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Rooter.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.Config" />
