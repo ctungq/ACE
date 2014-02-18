@@ -2,6 +2,7 @@
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using ACE.Models;
 using ACE.DAL;
+using ACE;
 
 namespace ACE.UnitTestACE
 {
@@ -10,10 +11,18 @@ namespace ACE.UnitTestACE
     {
 
         [TestMethod]
-        public void TestMethod1()
+        public void BasicRooterTest()
         {
-            //ACEContext context = new ACEContext();
-            //Course c =context.Courses.
+            // Create an instance to test:
+            Rooter rooter = new Rooter();
+            // Define a test input and output value:
+            double expectedResult = 2.0;
+            double input = expectedResult * expectedResult;
+            // Run the method under test:
+            double actualResult = rooter.SquareRoot(input);
+            // Verify the result:
+            Assert.AreEqual(expectedResult, actualResult,
+                delta: expectedResult / 100);
         }
     }
 }
